@@ -6,11 +6,11 @@ from datetime import datetime
 LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 
 # Set log path without including the log file name in the directory
-log_dir = os.path.join(os.getcwd(), "logs")
-os.makedirs(log_dir, exist_ok=True)
+logs_path = os.path.join(os.getcwd(), "logs",LOG_FILE)
+os.makedirs(logs_path, exist_ok=True)
 
 # Set full log file path
-LOG_FILE_PATH = os.path.join(log_dir, LOG_FILE)
+LOG_FILE_PATH = os.path.join(logs_path, LOG_FILE)
 
 # Configure logging
 logging.basicConfig(
